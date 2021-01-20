@@ -1,9 +1,18 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {
+    render,
+    screen,
+} from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+    test('renders App Component', () => {
+        render(
+            <App />
+        );
+        //screen.debug();
+    });
+    // test('App component has child NavBar', () => {
+    //   render( <App /> )
+    // })
 });
