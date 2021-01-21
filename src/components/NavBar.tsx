@@ -1,28 +1,32 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
 
-function NavBar() {
-    return (
-        <nav>
-            <div className='logo'>
-                Nordheim
-            </div>
-            <div className='pages'>
-                <NavLink to='/'>
-                    Home
-                </NavLink>
-                <NavLink to='/about'>
-                    About
-                </NavLink>
-                <NavLink to='/blogs'>
-                    Blogs
-                </NavLink>
-                <NavLink to='/contact'>
-                    Contact
-                </NavLink>
-            </div>
-        </nav>
-    );
+import { styled } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
+
+import { AppRoutes } from "../config/routes";
+
+import StyledNavBarLink from "./NavBar.link";
+import StyledNavBarLogo from "./NavBar.logo";
+
+const StyledNav = styled(Grid)({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: "10px 10px",
+});
+
+export default function NavBar() {
+  return (
+    <StyledNav>
+      <StyledNavBarLogo />
+      {AppRoutes.map((r) => (
+        <StyledNavBarLink
+          key={r.label}
+          to={r.to}
+          icon={r.icon}
+          label={r.label}
+        />
+      ))}
+    </StyledNav>
+  );
 }
-
-export default NavBar;
