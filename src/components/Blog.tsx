@@ -15,24 +15,27 @@ interface IBlogProps {
   blog: IBlog;
 }
 
-const BlogCard = styled(Card)({});
+const MyBlogCard = styled(Card)({
+  height: "100%",
+});
 
-const Blog = (props: IBlogProps) => {
+const BlogCard = (props: IBlogProps) => {
+  const placeHolderImg =
+    "https://via.placeholder.com/728x90.png?text=No+Image+File";
   return (
-    <Grid item>
-      <BlogCard key={props.blog.title}>
+    <Grid item xs={12} sm={6} md={4}>
+      <MyBlogCard key={props.blog.title}>
         <CardContent>
           <CardActionArea>
             <CardHeader>{props.blog.title}</CardHeader>
-            {props.blog.img ? (
-              <CardMedia
-                component="img"
-                alt={props.blog.title}
-                height="100"
-                hidden={!props.blog.img}
-                image={props.blog.img ? props.blog.img : undefined}
-              ></CardMedia>
-            ) : null}
+            <CardMedia
+              style={{ borderRadius: "5px", background: "gray" }}
+              component="img"
+              alt={props.blog.title}
+              height="100"
+              placeholder={placeHolderImg}
+              image={props.blog.img ? props.blog.img : placeHolderImg}
+            ></CardMedia>
           </CardActionArea>
           <Typography gutterBottom variant="h5" component="h2">
             {props.blog.title}
@@ -41,9 +44,9 @@ const Blog = (props: IBlogProps) => {
             {props.blog.teaser}
           </Typography>
         </CardContent>
-      </BlogCard>
+      </MyBlogCard>
     </Grid>
   );
 };
 
-export default Blog;
+export default BlogCard;
