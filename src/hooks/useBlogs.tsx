@@ -19,7 +19,7 @@ export const useBlogs = () => [
     title: `GraphQL vs. REST`,
     uri: "https://dev.to/jasonnordheim/graphql-vs-rest-4mkl",
     img:
-      "https://res.cloudinary.com/prahttps://res.cloudinary.com/practicaldev/image/fetch/s--3mAvlfN2--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/q48jlz5zswj0uo84t8tt.jpegcticaldev/image/fetch/s--R1veFWbn--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/1xdkl0q53884jh7pr0v1.jpg",
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--HkMa2At1--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/0w4vlfc8rpztq0d1y2rv.png",
     teaser:
       "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
   },
@@ -28,6 +28,15 @@ export const useBlogs = () => [
     uri: "https://dev.to/jasonnordheim/debounce-performance-and-react-4de1",
     img:
       "https://res.cloudinary.com/practicaldev/image/fetch/s--R1veFWbn--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/1xdkl0q53884jh7pr0v1.jpg",
+    teaser:
+      "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+  },
+  {
+    title: `How JavaScript came to dominate web development`,
+    uri:
+      "https://dev.to/jasonnordheim/how-javascript-came-to-dominate-web-development-3nom",
+    img:
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--V2yMvobl--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/z3obe3geq76fgk13tnhw.jpeg",
     teaser:
       "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
   },
