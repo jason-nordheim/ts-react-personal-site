@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, ThemeProvider } from "@material-ui/core";
+import { Grid, styled, ThemeProvider } from "@material-ui/core";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -11,11 +11,15 @@ import ContactPage from "./pages/ContactPage";
 
 import { theme } from "./config/theme";
 
+const AppGrid = styled(Grid)({
+  background: "#e8e8e8",
+});
+
 function App() {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <Grid container direction="column">
+        <AppGrid container direction="column">
           <Grid item>
             <NavBar />
           </Grid>
@@ -35,7 +39,7 @@ function App() {
               </Route>
             </Switch>
           </Grid>
-        </Grid>
+        </AppGrid>
       </ThemeProvider>
     </BrowserRouter>
   );
