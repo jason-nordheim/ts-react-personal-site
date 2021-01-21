@@ -1,8 +1,6 @@
-import React, { Component } from "react";
-import { StyledPage } from "../components/Page";
+import React from "react";
+import { Page } from "../components/Page";
 
-export default class ContactPage extends Component {
-  render() {
-    return <StyledPage>Contact Page</StyledPage>;
-  }
+export default function ContactPage() {
+  return <Page>Contact Page</Page>;
 }
