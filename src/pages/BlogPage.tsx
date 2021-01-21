@@ -3,7 +3,7 @@ import { Page } from "../components/Page";
 import { SectionTitle } from "../components/SectionTitle";
 import { useBlogs } from "../hooks/useBlogs";
 import { Grid } from "@material-ui/core";
-import Blog from "../components/Blog";
+import BlogCard from "../components/Blog";
 import { styled } from "@material-ui/core/styles";
 
 const MyBlogGrid = styled(Grid)({
@@ -12,13 +12,12 @@ const MyBlogGrid = styled(Grid)({
 
 export default function BlogPage() {
   const blogs = useBlogs();
-  console.log(blogs);
   return (
     <Page>
       <SectionTitle>Blogs</SectionTitle>
-      <MyBlogGrid container spacing={3} xs={12} md={10}>
+      <MyBlogGrid container spacing={3} xs={12}>
         {blogs?.map((b) => {
-          return <Blog key={b.title} blog={b} />;
+          return <BlogCard key={b.title} blog={b} />;
         })}
       </MyBlogGrid>
     </Page>
